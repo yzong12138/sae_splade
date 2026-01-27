@@ -1,0 +1,54 @@
+id: splade_multilingual
+description: |
+    The base splade model with a batchwise distillation.
+
+    On the detail side, we use both 32 length for the queries and 256 for
+    documents.
+
+file: experiment
+pythonpath: [../../..]
+
+gpu: true
+
+logging: ["splade_k"]
+
+validation:
+    size: 200
+
+train_config:
+    ml_langs: ["ar", "es", "fr", "ja", "ru", "zh"]
+    sae:
+        hf_id: ["distilbert/distilbert-base-multilingual-cased"]
+    sae_splade:
+        nway: 8
+        d_flops: [0.04]
+        q_flops: [0.06]
+        flops_lambda_warmup: 6000
+        override_k_option: [8]
+
+learning:
+    ir_optimization:
+        scheduler: true
+        steps_per_epoch: 400
+        batch_size: 32
+        max_epochs: 600
+        weight_decay: 0.01
+        lr: [2.0e-5]
+        eps: 1.0e-8
+        num_warmup_steps: 10000
+        num_steps_to_decay: [10000]
+        warmup_min_factor: [0]
+        re_no_l2_regularization: []
+
+    validation_interval: 20
+    requirements: duration=6 days & cuda(mem=40G)
+    validation_top_k: 50
+
+retrieval:
+    batch_size: 512 # maybe a little bit too large
+    requirements: duration=2 days & cuda(mem=40G)
+
+    eval_on_mcl: true
+
+indexation:
+    requirements: duration=1 days & cuda(mem=40G)

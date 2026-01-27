@@ -1,0 +1,81 @@
+id: sae_splade_multilingual_base
+description: |
+    The SAESPLADE based on the last hidden state of a DistilBERT model.
+
+    More precisely, this model leverage the SAE projection on top of the model
+    to replace the MLM projection of the original SPLADE. We use the limit the
+    document length to 256 and the query length to 32.
+
+    The model is based on the SAE here: sae/sae_experiment/normal_base.yaml and
+    should have the same identifer.
+
+    Currently use such models to analysis whether we need to scale the
+    representation.
+
+file: experiment
+pythonpath: [../../..]
+# module: src.sae_splade.topk_sae_distil_then_splade.experiment
+gpu: true
+
+logging: ["k", "d_flops"]
+
+validation:
+    size: 200
+
+train_config:
+    ml_langs: ["ar", "es", "fr", "ja", "ru", "zh"]
+    sae:
+        hf_id: ["distilbert/distilbert-base-multilingual-cased"]
+        sae_width_list: [65536]
+        layers: [-1]
+        topk_style: "TopK"
+        ks: [8]
+        norm_sae_input_opt: [False]
+        sae_train_with_query_opt: [False]
+        aux_rcst_coeff: [0.0625] # value is 0 for HTopK
+    sae_splade:
+        nway: 8
+        d_flops: [0.004, 0.010, 0.02, 0.04]
+        q_flops: [0.006, 0.015, 0.03, 0.06]
+        flops_lambda_warmup: 6000
+        override_k_option: [0]
+
+learning:
+    sae_optimization:
+        scheduler: true
+        steps_per_epoch: 400
+        batch_size: 768
+        max_epochs: 400
+        weight_decay: 0.01
+        lr: 5.0e-5
+        eps: 6.0e-10
+        num_warmup_steps: 10000
+        warmup_min_factor: 1000
+        # empty when freezing transformers
+        re_no_l2_regularization: []
+
+    ir_optimization:
+        scheduler: true
+        steps_per_epoch: 400
+        batch_size: 32 # pairwise distillation
+        max_epochs: 600
+        weight_decay: 0.01
+        lr: [2.0e-5]
+        eps: 1.0e-8
+        num_warmup_steps: 10000
+        num_steps_to_decay: [10000]
+        warmup_min_factor: [0]
+        re_no_l2_regularization: []
+
+    validation_interval: 20
+    requirements: duration=6 days & cuda(mem=40G)
+    validation_top_k: 50
+
+retrieval:
+    batch_size: 512 # maybe a little bit too large
+    requirements: duration=2 days & cuda(mem=40G)
+
+    eval_on_mcl: true
+
+indexation:
+    requirements: duration=1 days & cuda(mem=40G)

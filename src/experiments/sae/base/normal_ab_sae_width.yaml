@@ -1,0 +1,45 @@
+id: sae_width_ab
+description: |
+    The TopKSAE training based on the last hidden state of a DistilBERT model.
+    Albation over the width of the SAE.
+
+file: experiment
+pythonpath: [../../..]
+
+gpu: true
+
+validation:
+    size: 1000
+
+train_config:
+    sae:
+        hf_id: ["distilbert/distilbert-base-uncased"]
+        sae_width_list: [32768, 65536, 131072]
+        layers: [-1]
+        topk_style: "TopK"
+        ks: [8]
+        norm_sae_input_opt: [False]
+        sae_train_with_query_opt: [False]
+        aux_rcst_coeff: [0.0625] # value is 0 for HTopK
+
+learning:
+    sae_optimization:
+        scheduler: true
+        steps_per_epoch: 400
+        batch_size: 768
+        max_epochs: 400
+        weight_decay: 0.01
+        lr: 5.0e-5
+        eps: 6.0e-10
+        num_warmup_steps: 10000
+        warmup_min_factor: 1000
+        # empty when freezing transformers
+        re_no_l2_regularization: []
+        adam_beta1: 0.9
+
+    validation_interval: 20
+    requirements: duration=6 days & cuda(mem=40G)
+
+retrieval:
+    batch_size: 128
+    requirements: duration=2 days & cuda(mem=40G)

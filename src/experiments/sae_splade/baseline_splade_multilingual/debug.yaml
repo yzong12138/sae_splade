@@ -1,0 +1,56 @@
+id: splade_multilingual_debug
+description: |
+    top k sae, Here we only train with no ir loss, following the original work.
+    We use a smaller sae width and a larger batch size.
+
+    Use the trained SAE checkpoints to finetuning a splade in a batchwise
+    distillation methods
+
+file: experiment
+pythonpath: [../../..]
+
+gpu: true
+
+logging: ["k"]
+
+validation:
+    size: 10
+
+train_config:
+    ml_langs: ["fr", "zh"]
+    sae:
+        hf_id: ["distilbert/distilbert-base-multilingual-cased"]
+    sae_splade:
+        nway: 8
+        d_flops: [0.06]
+        q_flops: [0.04]
+        flops_lambda_warmup: 20
+        override_k_option: [8, -1]
+
+learning:
+    ir_optimization:
+        scheduler: true
+        steps_per_epoch: 10
+        batch_size: 4
+        max_epochs: 10
+        weight_decay: 0.01
+        lr: [2.0e-5]
+        eps: 6.0e-10
+        num_warmup_steps: 20
+        num_steps_to_decay: [80]
+        warmup_min_factor: [1]
+        re_no_l2_regularization: []
+
+    sample_rate: .01
+    sample_max: 100_000
+    validation_top_k: 20
+
+    validation_interval: 5
+    requirements: duration=2 days & cuda(mem=24G)
+
+retrieval:
+    batch_size: 8
+    requirements: duration=2 days & cuda(mem=12G)
+
+indexation:
+    requirements: duration=1 days & cuda(mem=12G)
