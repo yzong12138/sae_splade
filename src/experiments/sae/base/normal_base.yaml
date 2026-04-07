@@ -1,7 +1,7 @@
 id: sae_experiment_base
 description: |
     The TopKSAE training based on the last hidden state of a DistilBERT model.
-    The single base experiments
+    The single base experiments.
 
 file: experiment
 pythonpath: [../../..]

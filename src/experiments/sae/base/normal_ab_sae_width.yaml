@@ -1,7 +1,7 @@
 id: sae_width_ab
 description: |
     The TopKSAE training based on the last hidden state of a DistilBERT model.
-    Albation over the width of the SAE.
+    Ablation over the width of the SAE: e.g. 2**15, 2**16, 2**17
 
 file: experiment
 pythonpath: [../../..]

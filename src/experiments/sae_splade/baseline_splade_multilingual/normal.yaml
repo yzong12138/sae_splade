@@ -1,6 +1,6 @@
 id: splade_multilingual
 description: |
-    The base splade model with a batchwise distillation.
+    The base splade model with a batchwise distillation for multilingual experiments.
 
     On the detail side, we use both 32 length for the queries and 256 for
     documents.

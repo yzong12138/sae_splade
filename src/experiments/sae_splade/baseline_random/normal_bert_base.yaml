@@ -1,6 +1,6 @@
 id: splade_random_projection_bert_base
 description: |
-    The SAESPLADE based on the last hidden state of a DistilBERT model.
+    The SAESPLADE based on the last hidden state of a BERT model.
 
     More precisely, this model leverage the SAE projection on top of the model
     to replace the MLM projection of the original SPLADE. We use the limit the

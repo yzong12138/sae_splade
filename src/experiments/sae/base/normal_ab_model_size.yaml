@@ -1,6 +1,7 @@
 id: sae_model_size_ab
 description: |
-    The TopKSAE training: Ablation based on the various size of the base model.
+    The TopKSAE training: Ablation based on the various size of the base model
+    e.g., DistilBERT v.s. BERT
 
 file: experiment
 pythonpath: [../../..]
