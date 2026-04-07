@@ -1,15 +1,40 @@
-From Tokens to Concepts: Leveraging SAE for SPLADE
+<!-- From Tokens to Concepts: Leveraging SAE for SPLADE
 ===
 
-This repository contains all the details, configurations and scripts necessary in order to reproduce the experiments led in the context of the paper *From Tokens to Concepts: Leveraging SAE for SPLADE* by [Yuxuan Zong](https://www.linkedin.com/in/yuxuan-zong-943a42207/), [Mathias Vast](https://scholar.google.com/citations?user=QGCo1PAAAAAJ&hl), Basile Van Cooten, [Laure Soulier](https://scholar.google.fr/citations?user=3gUQp6oAAAAJ&hl) and [Benjamin Piwowarski](https://www.piwowarski.fr/), that was accepted at SIGIR 2026.
+This repository contains all the details, configurations and scripts necessary in order to reproduce the experiments led in the context of the paper *From Tokens to Concepts: Leveraging SAE for SPLADE* by [Yuxuan Zong](https://www.linkedin.com/in/yuxuan-zong-943a42207/), [Mathias Vast](https://scholar.google.com/citations?user=QGCo1PAAAAAJ&hl), Basile Van Cooten, [Laure Soulier](https://scholar.google.fr/citations?user=3gUQp6oAAAAJ&hl) and [Benjamin Piwowarski](https://www.piwowarski.fr/), that was accepted at SIGIR 2026. -->
+
+<div align="center">
+
+<h1>MICE: Minimal Interaction Cross-Encoders for efficient Re-ranking</h1>
+<div>
+    <a href=https://www.linkedin.com/in/yuxuan-zong-943a42207/ target='_blank'>Yuxuan Zong</a><sup>1</sup>&emsp;
+    <a href='https://scholar.google.com/citations?user=QGCo1PAAAAAJ&hl' target='_blank'>Mithias Vast</a><sup>12</sup>&emsp;
+    <a target='_blank'>Basile van Cooten</a><sup>2</sup>&emsp;
+    <a href='https://scholar.google.fr/citations?user=3gUQp6oAAAAJ&hl' target='_blank'>Laure Soulier</a><sup>1</sup>&emsp;
+    <a href='https://www.piwowarski.fr' target='_blank'>Benjamin Piwowarski</a><sup>1</sup>&emsp;
+</div>
+<br>
+<div>
+    <sup>1</sup>Sorbonne Université, CNRS, ISIR, F-75005 Paris, France&emsp;<br>
+    <sup>2</sup>ChapsVision, Paris, France&emsp;<br>
+</div>
+<br>
+
+<img src="assets/sae_splade.png" alt="SAE-SPLADE Architecture" width="600"/>
+</div>
 
 ## Table of Contents
+
 
 * [Installation](#installation)
 * [Experiments Reproduction](#experiments-reproduction)
 * [Analysis](#analysis)
 * [Contact](#contact)
 * [Citation](#citation)
+
+## Abstract
+
+> _Learned Sparse IR models, such as SPLADE, offer an excellent efficiency-effectiveness tradeoff. However, they rely on the underlying backbone vocabulary, which might hinder performance (poly-semanticity and synonymy) and poses a challenge for multi-lingual and multi-modal usages. To solve this limitation, we propose to replace the backbone vocabulary with a latent space of semantic concepts learned using Sparse Auto-Encoders (SAE). Throughout this paper, we study the compatibility of these 2 concepts, explore training approaches and analyze the differences between our SAE-SPLADE model and traditional SPLADE models. Our experiments demonstrate that SAE-SPLADE achieves retrieval performance comparable to SPLADE on both in-domain and out-of-domain tasks, while offering improved efficiency.
 
 ## Installation
 
