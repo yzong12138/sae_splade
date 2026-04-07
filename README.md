@@ -71,7 +71,7 @@ Here we give some example of running experiments. They include the data-preproce
 uv run experimaestro run-experiment src/experiments/sae_splade/baseline_splade/normal_bert_base.yaml --workdir /your/working/directory/
 ````
 
-2. SAE-SPLADE on which varies different $k_{\text{SAE}}$ and $k_{\text{SAE_SPLADE}}$ values for based on Hierarchical TopK SAE.
+2. SAE-SPLADE on which varies different $k_{\mathtt{SAE}}$ and $k_{\mathtt{SAE_SPLADE}}$ values for based on Hierarchical TopK SAE.
 ````unix
 uv run experimaestro run-experiment src/experiments/sae_splade/base/normal_topk.yaml --workdir /your/working/directory/
 ````
