@@ -22,6 +22,10 @@ dependencies = [
     "jupyterlab==4.2.5",
     "datasets",
     "pre-commit==4.5.1",
+    "matplotlib",
+    "seaborn",
+    "pandas",
+    "umap-learn>=0.5.9.post2",
     "bmp",
 ]
 

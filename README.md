@@ -7,6 +7,7 @@ This repository contains all the details, configurations and scripts necessary i
 
 * [Installation](#installation)
 * [Experiments Reproduction](#experiments-reproduction)
+* [Analysis](#analysis)
 * [Contact](#contact)
 * [Citation](#citation)
 
@@ -83,6 +84,10 @@ uv run experimaestro run-experiment src/experiments/sae_splade/base/normal_ab_fl
 ... and many many more!
 
 Alternatively, if you want to make sure that everything is setup correctly before starting your experiment, you can add the option `--run-mode dry-run` to the command above to go over the experimental plan without launching the task.
+
+## Analysis
+
+We also provide the jupyter notebook for our result analysis and the code for T-test [here](notebooks). Before launching, please make sure that the PYTHONPATH is correctly settled at [src](src).
 
 ## Contact
 
