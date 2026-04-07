@@ -1,7 +1,7 @@
 From Tokens to Concepts: Leveraging SAE for SPLADE
 ===
 
-This repository contains all the details, configurations and scripts necessary in order to reproduce the experiments led in the context of the paper *From Tokens to Concepts: Leveraging SAE for SPLADE* by Yuxuan Zong, Mathias Vast, Basile Van Cooten, Laure Soulier and Benjamin Piwowarski, that was accepted at SIGIR 2026.
+This repository contains all the details, configurations and scripts necessary in order to reproduce the experiments led in the context of the paper *From Tokens to Concepts: Leveraging SAE for SPLADE* by [Yuxuan Zong](https://www.linkedin.com/in/yuxuan-zong-943a42207/), [Mathias Vast](https://scholar.google.com/citations?user=QGCo1PAAAAAJ&hl), Basile Van Cooten, [Laure Soulier](https://scholar.google.fr/citations?user=3gUQp6oAAAAJ&hl) and [Benjamin Piwowarski](https://www.piwowarski.fr/), that was accepted at SIGIR 2026.
 
 ## Table of Contents
 
