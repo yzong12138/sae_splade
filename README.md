@@ -8,7 +8,7 @@ This repository contains all the details, configurations and scripts necessary i
 <h1>From Tokens to Concepts: Leveraging SAE for SPLADE</h1>
 <div>
     <a href=https://www.linkedin.com/in/yuxuan-zong-943a42207/ target='_blank'>Yuxuan Zong</a><sup>1</sup>&emsp;
-    <a href='https://scholar.google.com/citations?user=QGCo1PAAAAAJ&hl' target='_blank'>Mithias Vast</a><sup>12</sup>&emsp;
+    <a href='https://scholar.google.com/citations?user=QGCo1PAAAAAJ&hl' target='_blank'>Mathias Vast</a><sup>12</sup>&emsp;
     <a target='_blank'>Basile van Cooten</a><sup>2</sup>&emsp;
     <a href='https://scholar.google.fr/citations?user=3gUQp6oAAAAJ&hl' target='_blank'>Laure Soulier</a><sup>1</sup>&emsp;
     <a href='https://www.piwowarski.fr' target='_blank'>Benjamin Piwowarski</a><sup>1</sup>&emsp;
@@ -34,11 +34,11 @@ This repository contains all the details, configurations and scripts necessary i
 
 ## Abstract
 
-> Learned Sparse IR models, such as SPLADE, offer an excellent efficiency-effectiveness tradeoff.
+> _Learned Sparse IR models, such as SPLADE, offer an excellent efficiency-effectiveness tradeoff.
 However, they rely on the underlying backbone vocabulary, which might hinder performance (poly-semanticity and synonymy) and poses a challenge for multi-lingual and multi-modal usages.
 To solve this limitation, we propose to replace the backbone vocabulary with a latent space of semantic concepts learned using Sparse Auto-Encoders (SAE).
 Throughout this paper, we study the compatibility of these 2 concepts, explore training approaches and analyze the differences between our SAE-SPLADE model and traditional SPLADE models.
-Our experiments demonstrate that SAE-SPLADE achieves retrieval performance comparable to SPLADE on both in-domain and out-of-domain tasks, while offering improved efficiency.
+Our experiments demonstrate that SAE-SPLADE achieves retrieval performance comparable to SPLADE on both in-domain and out-of-domain tasks, while offering improved efficiency._
 
 ## Installation
 
