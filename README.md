@@ -5,7 +5,7 @@ This repository contains all the details, configurations and scripts necessary i
 
 <div align="center">
 
-<h1>MICE: Minimal Interaction Cross-Encoders for efficient Re-ranking</h1>
+<h1>From Tokens to Concepts: Leveraging SAE for SPLADE</h1>
 <div>
     <a href=https://www.linkedin.com/in/yuxuan-zong-943a42207/ target='_blank'>Yuxuan Zong</a><sup>1</sup>&emsp;
     <a href='https://scholar.google.com/citations?user=QGCo1PAAAAAJ&hl' target='_blank'>Mithias Vast</a><sup>12</sup>&emsp;
@@ -34,7 +34,11 @@ This repository contains all the details, configurations and scripts necessary i
 
 ## Abstract
 
-> _Learned Sparse IR models, such as SPLADE, offer an excellent efficiency-effectiveness tradeoff. However, they rely on the underlying backbone vocabulary, which might hinder performance (poly-semanticity and synonymy) and poses a challenge for multi-lingual and multi-modal usages. To solve this limitation, we propose to replace the backbone vocabulary with a latent space of semantic concepts learned using Sparse Auto-Encoders (SAE). Throughout this paper, we study the compatibility of these 2 concepts, explore training approaches and analyze the differences between our SAE-SPLADE model and traditional SPLADE models. Our experiments demonstrate that SAE-SPLADE achieves retrieval performance comparable to SPLADE on both in-domain and out-of-domain tasks, while offering improved efficiency.
+> _Learned Sparse IR models, such as SPLADE, offer an excellent efficiency-effectiveness tradeoff.
+However, they rely on the underlying backbone vocabulary, which might hinder performance (poly-semanticity and synonymy) and poses a challenge for multi-lingual and multi-modal usages.
+To solve this limitation, we propose to replace the backbone vocabulary with a latent space of semantic concepts learned using Sparse Auto-Encoders (SAE).
+Throughout this paper, we study the compatibility of these 2 concepts, explore training approaches and analyze the differences between our SAE-SPLADE model and traditional SPLADE models.
+Our experiments demonstrate that SAE-SPLADE achieves retrieval performance comparable to SPLADE on both in-domain and out-of-domain tasks, while offering improved efficiency.
 
 ## Installation
 
