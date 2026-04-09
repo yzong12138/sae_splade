@@ -9,7 +9,7 @@ This repository contains all the details, configurations and scripts necessary i
 <div>
     <a href=https://www.linkedin.com/in/yuxuan-zong-943a42207/ target='_blank'>Yuxuan Zong</a><sup>1</sup>&emsp;
     <a href='https://scholar.google.com/citations?user=QGCo1PAAAAAJ&hl' target='_blank'>Mathias Vast</a><sup>12</sup>&emsp;
-    <a target='_blank'>Basile van Cooten</a><sup>2</sup>&emsp;
+    <a href='https://www.linkedin.com/in/basilevancooten/' target='_blank'>Basile van Cooten</a><sup>2</sup>&emsp;
     <a href='https://scholar.google.fr/citations?user=3gUQp6oAAAAJ&hl' target='_blank'>Laure Soulier</a><sup>1</sup>&emsp;
     <a href='https://www.piwowarski.fr' target='_blank'>Benjamin Piwowarski</a><sup>1</sup>&emsp;
 </div>
