@@ -39,7 +39,7 @@ override-dependencies = [
 [tool.uv.sources]
 ir-datasets = { git = "https://github.com/yzong12138/ir_datasets.git" }
 datamaestro-text = { git = "https://github.com/experimaestro/datamaestro_text.git", rev="c03e471"}
-experimaestro-ir = { git = "https://git.isir.upmc.fr/bpiwowar/experimaestro-ir", branch = "project/referential" }
+experimaestro-ir = { git = "https://github.com/experimaestro/experimaestro-ir.git", branch = "sae_splade" }
 torch = [
   { index = "pytorch-cu126", marker = "sys_platform == 'linux'" },
 ]

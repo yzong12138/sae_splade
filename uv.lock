@@ -1201,8 +1201,8 @@ wheels = [
 
 [[package]]
 name = "experimaestro-ir"
-version = "0.6.3.dev640+g87b06c415"
-source = { git = "https://git.isir.upmc.fr/bpiwowar/experimaestro-ir?branch=project%2Freferential#87b06c4156d69e6880241fb1b6461b6392833b42" }
+version = "1.4.1.dev195+g87b06c415"
+source = { git = "https://github.com/experimaestro/experimaestro-ir.git?branch=sae_splade#87b06c4156d69e6880241fb1b6461b6392833b42" }
 dependencies = [
     { name = "attrs" },
     { name = "datamaestro" },
@@ -5318,7 +5318,7 @@ requires-dist = [
     { name = "datamaestro-text", git = "https://github.com/experimaestro/datamaestro_text.git?rev=c03e471" },
     { name = "datasets" },
     { name = "experimaestro", specifier = "==2.0.0a8" },
-    { name = "experimaestro-ir", extras = ["anserini", "neural"], git = "https://git.isir.upmc.fr/bpiwowar/experimaestro-ir?branch=project%2Freferential" },
+    { name = "experimaestro-ir", extras = ["anserini", "neural"], git = "https://github.com/experimaestro/experimaestro-ir.git?branch=sae_splade" },
     { name = "faiss-cpu" },
     { name = "huggingface-hub", specifier = "==0.34.4" },
     { name = "ir-datasets", git = "https://github.com/yzong12138/ir_datasets.git" },
