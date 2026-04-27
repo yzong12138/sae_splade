@@ -124,9 +124,11 @@ Please feel free to email Yuxuan or Mathias or academic' supervisor Benjamin at 
 
 ## Citation
 
+```tex
 @article{zong2026tokens,
   title={From Tokens to Concepts: Leveraging SAE for SPLADE},
   author={Zong, Yuxuan and Vast, Mathias and Van Cooten, Basile and Soulier, Laure and Piwowarski, Benjamin},
   journal={arXiv preprint arXiv:2604.21511},
   year={2026}
 }
+```
